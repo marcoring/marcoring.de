@@ -4,7 +4,7 @@
       app
       color="primary"
       dark
-    >
+    > 
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -38,6 +38,33 @@
     </v-app-bar>
 
     <v-main>
+      <div id="app">
+        <v-app id="inspire">
+          <v-toolbar dark absolute class="homepage-toolbar">
+          <v-toolbar-side-icon></v-toolbar-side-icon>
+          <v-toolbar-title>Title</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-toolbar-items class="hidden-sm-and-down">
+        </v-toolbar-items>
+       </v-toolbar>
+    
+        <section style="height: 100vh;">
+          <v-parallax 
+            dark 
+            src="https://townshipcanada.com/static/pattern.svg">
+            <!--:src="require('@/assets/pic1.jpg')"-->
+            <v-layout white--text align-center column justify-center style="margin-top: 8.5em;">
+              <h3 class=" display-3 ma-2 text-xs-center">Vuetify.js</h3>
+              <h4 class="subheading">Build your application today!</h4>
+              <v-flex row wrap text-xs-center>
+              <v-btn dark large color="blue lighten-2" class="mt-4 elevation-0">login</v-btn>
+              <v-btn dark large color="blue lighten-2" class="mt-4 elevation-0">signup</v-btn>
+              </v-flex>
+            </v-layout>
+          </v-parallax>
+        </section>
+        </v-app>
+      </div>
       <HelloWorld/>
     </v-main>
   </v-app>
@@ -58,3 +85,14 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+
+  .homepage-toolbar {
+    background: rgba(222,222,222,0.4) !important;
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+</style>
